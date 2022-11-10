@@ -39,9 +39,9 @@ jobs:
    steps:
      - uses: appleboy/telegram-action@master
        with:
-         token: 5652669718:AAFkY5vNixAwMBWz_f9K0C5zIvPSWZXCMyE
-         to: -639170542
-
+         token: ${{secrets.TELEGRAM_TOKEN}}
+         to: ${{secrets.TELEGRAM_TO }}
+         
          message: |
            ${{ github.actor }} created commit:
             Commit message: ${{ github.event.commits[0].message }}
